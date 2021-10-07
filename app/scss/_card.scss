@@ -1,0 +1,8 @@
+@use 'variables' as var;
+
+@mixin breakpoint {
+   @media (min-width: 50em) {
+      @content;
+   }
+}
+

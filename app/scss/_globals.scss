@@ -1,0 +1,17 @@
+@use 'variables' as var;
+
+html {
+   box-sizing: border-box;
+}
+
+body {
+   height: 100vh;
+   width: 100vw;
+   font-family: 'Kumbh Sans', sans-serif;
+   font-size: 12px;
+   background: linear-gradient(to bottom, var.$softViolet 0%, var.$softBlue 100%);
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
