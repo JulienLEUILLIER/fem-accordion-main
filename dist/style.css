@@ -16,32 +16,40 @@ body {
   min-height: 100vh;
   font: 0.75rem "Kumbh Sans", sans-serif;
   background: linear-gradient(to bottom, #af67e9 0%, #6565e7 150%);
+  overflow: hidden;
+}
+@media screen and (min-width: 52em) {
+  body {
+    background: linear-gradient(to bottom, #af67e9 0%, #6565e7 100%);
+  }
 }
 
 ul {
   list-style: none;
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 52em) {
   .hide-for-desktop {
     display: none;
   }
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 52em) {
   .hide-for-mobile {
     display: none;
   }
 }
 
 .main__container {
-  max-width: 20.625rem;
+  width: 90vw;
+}
+@media screen and (min-width: 52em) {
+  .main__container {
+    width: 57.5rem;
+  }
 }
 
 .card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: white;
   border-radius: 1.5rem;
   box-shadow: 0px 50px 40px 0px rgba(0, 0, 0, 0.2);
@@ -50,25 +58,39 @@ ul {
   background-position: top center;
   position: relative;
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 52em) {
   .card {
-    background-image: url("/images/illustration-woman-online-desktop.svg");
-    background-position: center left;
+    background-image: url("/images/illustration-woman-online-desktop.svg"), url("/images/bg-pattern-desktop.svg");
+    background-position: -5.2rem 6em, -36rem -18rem;
   }
 }
 .card__illustration {
   position: absolute;
-  top: -7rem;
-  left: 1.1rem;
+  top: -6.7rem;
+  left: 47.5%;
+  transform: translateX(-50%);
+}
+@media screen and (min-width: 52em) {
+  .card__illustration {
+    position: absolute;
+    top: 13.2rem;
+    left: -8.2rem;
+    transform: none;
+  }
 }
 
 .accordion {
   padding: 8.625rem 1.5rem 3rem 1.5rem;
 }
+@media screen and (min-width: 52em) {
+  .accordion {
+    padding: 4.4375rem 6rem 5.1875rem 29.6875rem;
+  }
+}
 .accordion__title {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 2.75rem;
+  margin-bottom: 2.4375rem;
 }
 .accordion__item {
   padding-bottom: 1.25rem;
@@ -83,10 +105,30 @@ ul {
   justify-content: space-between;
   text-decoration: none;
   color: #4a4b5e;
-  margin-bottom: 1rem;
 }
 .accordion__question {
   font-size: 0.8125rem;
+}
+.accordion__question:hover {
+  color: #f47c57;
+}
+.accordion__answer {
+  line-height: 1.5;
+  display: none;
+  margin-top: 0.8rem;
+  color: #787887;
+}
+
+.active .accordion__question {
+  color: #1d1e35;
+  font-weight: 700;
+}
+.active .accordion__icon {
+  transform: rotate(180deg);
+  transition: all 250ms ease-in-out;
+}
+.active .accordion__answer {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

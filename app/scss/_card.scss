@@ -2,13 +2,14 @@
 @use 'mixins' as *;
 
 .main__container {
-   max-width: 20.625rem;
+   width: 90vw;
+
+   @include breakpoint-up {
+      width: 57.5rem;
+   }
 }
 
 .card {
-   display: flex;
-   align-items: center;
-   justify-content: center;
    background-color: white;
    border-radius: 1.5rem;
    box-shadow: 0px 50px 40px 0px rgba(0, 0, 0, 0.2);
@@ -18,24 +19,35 @@
    position: relative;
 
    @include breakpoint-up {
-      background-image: url('/images/illustration-woman-online-desktop.svg');
-      background-position: center left;
+      background-image: url('/images/illustration-woman-online-desktop.svg'), url('/images/bg-pattern-desktop.svg');
+      background-position: -5.2rem 6em, -36rem -18rem;
    }
 
    &__illustration {
       position: absolute;
-      top: -7rem;
-      left: 1.1rem; 
+      top: -6.7rem;
+      left: 47.5%;
+      transform: translateX(-50%);
+      @include breakpoint-up {
+         position: absolute;
+         top: 13.2rem;
+         left: -8.2rem;
+         transform: none;
+      }
    }
 }
 
 .accordion {
    padding: 8.625rem 1.5rem 3rem 1.5rem;
 
+   @include breakpoint-up {
+      padding: 4.4375rem 6rem 5.1875rem 29.6875rem;
+   }
+
    &__title {
       font-size: 2rem;
       text-align: center;
-      margin-bottom: 2.75rem;
+      margin-bottom: 2.4375rem;
    }
 
    &__item {
@@ -54,10 +66,44 @@
       justify-content: space-between;
       text-decoration: none;
       color: $veryDarkGrayishBlue;
-      margin-bottom: 1rem;
    }
 
    &__question {
       font-size: 0.8125rem;
+
+      &:hover {
+         color: $softRed;
+      }
+   }
+
+   &__answer {
+      line-height: 1.5;
+      display: none;
+      margin-top: 0.8rem;
+      color: $darkGrayishBlue;
+   }
+}
+
+.active {
+
+   .accordion {
+
+      &__question {
+         color: $veryDarkDesaturatedBlue;
+         font-weight: 700;
+
+         // &:hover {
+         //    color: $softRed;
+         // }
+      }
+
+      &__icon {
+         transform: rotate(180deg);
+         transition: all 250ms ease-in-out;
+      }
+
+      &__answer {
+         display: block;
+      }
    }
 }

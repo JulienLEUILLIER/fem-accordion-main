@@ -19,6 +19,11 @@ body {
    min-height: 100vh;
    font: 0.75rem 'Kumbh Sans', sans-serif;
    background: linear-gradient(to bottom, $softViolet 0%, $softBlue 150%);
+   overflow: hidden;
+
+   @include breakpoint-up {
+      background: linear-gradient(to bottom, $softViolet 0%, $softBlue 100%);
+   }
 }
 
 ul {
