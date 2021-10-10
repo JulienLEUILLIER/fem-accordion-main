@@ -1,8 +1,63 @@
-@use 'variables' as var;
+@use 'variables' as *;
+@use 'mixins' as *;
 
-@mixin breakpoint {
-   @media (min-width: 50em) {
-      @content;
+.main__container {
+   max-width: 20.625rem;
+}
+
+.card {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: white;
+   border-radius: 1.5rem;
+   box-shadow: 0px 50px 40px 0px rgba(0, 0, 0, 0.2);
+   background-image: url('/images/bg-pattern-mobile.svg');
+   background-repeat: no-repeat;
+   background-position: top center;
+   position: relative;
+
+   @include breakpoint-up {
+      background-image: url('/images/illustration-woman-online-desktop.svg');
+      background-position: center left;
+   }
+
+   &__illustration {
+      position: absolute;
+      top: -7rem;
+      left: 1.1rem; 
    }
 }
 
+.accordion {
+   padding: 8.625rem 1.5rem 3rem 1.5rem;
+
+   &__title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2.75rem;
+   }
+
+   &__item {
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid $lightGrayishBlue;
+
+      &:not(:last-child) {
+         margin-bottom: 1.1875rem;
+      }
+   }
+
+   &__clickable:link,
+   &__clickable:visited {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: $veryDarkGrayishBlue;
+      margin-bottom: 1rem;
+   }
+
+   &__question {
+      font-size: 0.8125rem;
+   }
+}

@@ -1,18 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 html {
+  font-size: 100%;
+}
+
+*, *::after, *::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
-  font-family: "Kumbh Sans", sans-serif;
-  font-size: 12px;
-  background: linear-gradient(to bottom, #af67e9 0%, #6565e7 100%);
-  overflow: hidden;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font: 0.75rem "Kumbh Sans", sans-serif;
+  background: linear-gradient(to bottom, #af67e9 0%, #6565e7 150%);
+}
+
+ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 50em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+.main__container {
+  max-width: 20.625rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0px 50px 40px 0px rgba(0, 0, 0, 0.2);
+  background-image: url("/images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+}
+@media screen and (min-width: 50em) {
+  .card {
+    background-image: url("/images/illustration-woman-online-desktop.svg");
+    background-position: center left;
+  }
+}
+.card__illustration {
+  position: absolute;
+  top: -7rem;
+  left: 1.1rem;
+}
+
+.accordion {
+  padding: 8.625rem 1.5rem 3rem 1.5rem;
+}
+.accordion__title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+.accordion__item {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #e7e7e9;
+}
+.accordion__item:not(:last-child) {
+  margin-bottom: 1.1875rem;
+}
+.accordion__clickable:link, .accordion__clickable:visited {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #4a4b5e;
+  margin-bottom: 1rem;
+}
+.accordion__question {
+  font-size: 0.8125rem;
 }
 
 /*# sourceMappingURL=style.css.map */

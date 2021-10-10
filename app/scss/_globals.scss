@@ -1,17 +1,39 @@
-@use 'variables' as var;
+@use 'variables' as *;
+@use 'mixins' as *;
 
 html {
-   box-sizing: border-box;
+   font-size: 100%;
 }
 
+*, *::after, *::before {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+ 
+
 body {
-   height: 100vh;
-   width: 100vw;
-   font-family: 'Kumbh Sans', sans-serif;
-   font-size: 12px;
-   background: linear-gradient(to bottom, var.$softViolet 0%, var.$softBlue 100%);
-   overflow: hidden;
    display: flex;
-   justify-content: center;
    align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   font: 0.75rem 'Kumbh Sans', sans-serif;
+   background: linear-gradient(to bottom, $softViolet 0%, $softBlue 150%);
+}
+
+ul {
+   list-style: none;
+}
+
+
+.hide-for-desktop {
+   @include breakpoint-up {
+      display: none;
+   }
+}
+
+.hide-for-mobile {
+   @include breakpoint-down {
+      display: none;
+   }
 }
