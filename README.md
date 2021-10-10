@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [](https://your-solution-url.com)
-- Live Site URL: [](https://fem-accordion-card-ten.vercel.app/)
+- Live Site URL: [Vercel hosted](https://fem-accordion-card-ten.vercel.app/)
 
 ## My process
 
@@ -44,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-:v: Second FrontEndMentor challenge completed !
+:v: Second FrontEndMentor challenge completed !<br/>
 I complicated things at first by trying to make the images responsive in size with the screen width, to be able to have a flexible width for mobile.
 I ended up just leaving a fixed size but learned some [awesome ways](https://adrienzaganelli.com/blog/time-saving-css-techniques-to-create-responsive-images/) to get responsive images !
 I also tried to implement BEM to get some, I think, clean and maintainable SCSS code.
