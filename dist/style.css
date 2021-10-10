@@ -92,6 +92,11 @@ ul {
   text-align: center;
   margin-bottom: 2.4375rem;
 }
+@media screen and (min-width: 52em) {
+  .accordion__title {
+    text-align: left;
+  }
+}
 .accordion__item {
   padding-bottom: 1.25rem;
   border-bottom: 1px solid #e7e7e9;
