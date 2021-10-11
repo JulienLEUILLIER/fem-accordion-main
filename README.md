@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://your-solution-url.com)
+- Solution URL: [Frontendmentor solution](https://www.frontendmentor.io/solutions/responsive-accordion-layout-scss-with-bem-NTpJ9epXc)
 - Live Site URL: [Vercel hosted](https://fem-accordion-card-ten.vercel.app/)
 
 ## My process
