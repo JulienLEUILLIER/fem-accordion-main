@@ -63,13 +63,18 @@
       }
    }
 
-   &__clickable:link,
-   &__clickable:visited {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+   &__clickable {
+      width: 100%;
+      text-align: left;
+      background-color: white;
+      background-image: url('/images/icon-arrow-down.svg');
+      background-repeat: no-repeat;
+      background-position: right;
+      font-family: 'Kumbh Sans', sans-serif;
+      border: none;
       text-decoration: none;
       color: $veryDarkGrayishBlue;
+      cursor: pointer;
    }
 
    &__question {
@@ -82,9 +87,11 @@
 
    &__answer {
       line-height: 1.5;
-      display: none;
-      margin-top: 0.8rem;
+      opacity: 0;
+      font-size: 0;
+      margin-top: 0;
       color: $darkGrayishBlue;
+      transition: ease-in-out 0.2s;
    }
 }
 
@@ -96,9 +103,9 @@
          color: $veryDarkDesaturatedBlue;
          font-weight: 700;
 
-         // &:hover {
-         //    color: $softRed;
-         // }
+         &:hover {
+            color: $softRed;
+         }
       }
 
       &__icon {
@@ -107,7 +114,9 @@
       }
 
       &__answer {
-         display: block;
+         opacity: 1;
+         font-size: 0.75rem;
+         margin-top: 0.8rem;
       }
    }
 }

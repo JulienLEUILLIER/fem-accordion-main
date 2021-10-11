@@ -10,6 +10,7 @@ accordionClickables.forEach((clickable) => {
       } else {
          closeAllAccordionItems();
          parentElementClasses.add('active');
+         clickable.setAttribute('aria-expanded', 'true');
       }
    });
 });
@@ -18,5 +19,6 @@ accordionClickables.forEach((clickable) => {
 function closeAllAccordionItems() {
    accordionClickables.forEach((clickable) => {
       clickable.parentElement.classList.remove('active');
+      clickable.setAttribute('aria-expanded', 'false');
    });
 }
