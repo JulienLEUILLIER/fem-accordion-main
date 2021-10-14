@@ -74,11 +74,20 @@ ul {
   .card__illustration {
     position: absolute;
     top: 13.2rem;
-    left: -8.2rem;
+    left: -6.8rem;
     transform: none;
+    animation: up-and-down 1s ease-in-out infinite alternate;
   }
 }
 
+@keyframes up-and-down {
+  from {
+    transform: translateY(-0.5rem);
+  }
+  to {
+    transform: translateY(0.8rem);
+  }
+}
 .accordion {
   padding: 8.625rem 1.5rem 3rem 1.5rem;
 }
@@ -129,7 +138,7 @@ ul {
   font-size: 0;
   margin-top: 0;
   color: #787887;
-  transition: ease-in-out 0.2s;
+  transition: ease-in 0.3s;
 }
 
 .active .accordion__question {
